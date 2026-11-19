@@ -3,13 +3,18 @@ public class Assignment01Q02 {
         double actualPi = Math.PI;
         double approxPi = 0;
 
-        /////////////////////////////////////////////
-        // TODO: Fill in the Pi approxiamtion here
-        /////////////////////////////////////////////
-        /// ...
-        
-        
-        /////////////////////////////////////////////
+        int n = Integer.parseInt(args[0]);
+        double sum = 0.0;
+
+        for (int i = 0; i < n; i++) {
+             double term = 1.0 / (2.0 * i + 1);
+             if (i % 2 == 0) {
+               sum += term;
+             } else {
+               sum -= term;
+             }
+}
+approxPi = 4.0 * sum;
         
         System.out.println(approxPi + " " + actualPi);
     }
